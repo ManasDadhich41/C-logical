@@ -1,0 +1,284 @@
+  prime factor of number:-
+
+#include <stdio.h>
+
+int main()
+{
+    int n;
+    scanf("%d",&n);
+    int i=2; 
+    while(n>1){
+        if(n%i==0){
+            n=n/i;      
+            printf("%d\n",i);
+        }
+        else i++;
+       }
+    
+
+}
+------------------------------------
+
+fiboncci series
+
+#include <stdio.h>
+
+int main()
+{
+    int n;
+    int a=1,b=2,ans;
+    scanf("%d",&n);
+    while(n>1){
+        ans=a+b;
+        a=b;
+        b=ans;
+        printf("%d ",ans);
+        n--;
+    }
+    
+}
+-------------------------------------
+
+optimize code of c(prime number)
+
+#include <stdio.h>
+
+int main()
+{
+	int n,i=2,count=0;
+	printf("enter the number");
+	scanf("%d",&n);
+	while(i*i<=n)
+	{
+		if(n%i==0) {
+			count++;
+			break;
+		}
+
+
+		i++;
+	}
+	if(count == 0) printf("prime");
+	else printf("not prime");
+}
+
+-------------------------------
+simple prime
+#include <stdio.h>
+
+int main()
+{
+
+    int i=1,count=0,num;
+    scanf("%d",&num);
+    while(i<=num)
+    {
+        if(num%i==0)
+        {
+            count++;
+            
+        }
+        i++;
+    }
+    if(count==2) printf("prime");
+    else printf("not prime ");
+}
+-------------------------------------------\
+  reverse digit and sum:
+
+#include <stdio.h>
+
+int main()
+{4
+    int n,i,sum=0;
+    scanf("%d",&n);
+    while(n>0)
+    {
+        i=n%10;
+        sum=sum+i;
+        printf("%d\n",i);
+        n=n/10;
+        
+    }
+    printf("%d",sum); 
+}
+----------------------------------------------
+ factorial of n
+
+#include <stdio.h>
+
+int main()
+{
+   int n,i=1,fact=1;
+   scanf("%d",&n);
+   while(i<=n){
+       fact=fact*i;
+       
+       i++;
+       
+   }
+   printf("%d" , fact );
+}
+----------------------------------------------
+1 to n prime numbers.
+#include <stdio.h>
+
+int main()
+{
+    
+    int n,num=2;
+    scanf("%d",&n);
+    while(num<=n)
+    {
+        int i=1,count=0;
+        while(i<=num)
+        {
+            if(num%i==0)
+            {
+                count++;
+            
+            }
+            i++;
+        }
+        if(count==2) printf("%d ",num);
+        num++;
+    }
+    
+    
+}
+--------------------------------------
+      pattern struct.
+#include <stdio.h>
+
+int main()
+{
+   int n;
+   scanf("%d",&n);
+   int temp=1;
+   for(int i=1;i<=n;i++)
+   {   
+       for(int j =1;j<=i;j++)                               
+                                                              
+       {
+           printf("%d ",temp);
+          
+           temp++;
+       }
+        
+        printf("\n");
+   }
+   
+}
+     O\P -: 1
+            2 3
+            4 5 6
+            7 8 9.
+-------------------------------------------
+#include <stdio.h>
+
+int main()
+{
+    int k =1;
+    int n;
+    printf("Enter n");
+    scanf("%d",&n);
+    for(int i=1;i<=n;i++){
+        for(int j=n;j>=1;j--){
+            if(j<=i) {printf("%d",k);
+                 k++;
+            }
+            else printf(" ");
+           
+        }
+        printf("\n");
+    }
+
+    return 0;
+}
+
+       1
+      23
+     456
+    78910
+-------------------------------------------------
+                      right mthd-:                          				
+#include <stdio.h>                               
+ 
+
+int main()                                       
+{
+	                                       
+	int n=4;
+	int temp=1;
+	for(int i=n;i>=1;i--)
+	{
+	    for(int j=n;j>=1;j--)
+	    {
+	        if(j<=i)
+	        {printf("%d",temp);
+	        temp++;
+	        }
+	        else printf(" ");
+	    }
+	    printf("\n");
+	}
+
+}
+o\p-:
+1234
+ 567
+  89
+    10.
+-----------------------------------------------------------
+alter of above one 
+
+#include <stdio.h>
+
+int main() {
+    int n = 4; // You can change this value
+    int temp=1;
+    for(int i = 1; i <= n; i++) {
+        for(int j = 1; j <= n; j++) {
+            if(j < i)
+                printf("  "); // print spaces
+            else
+                printf("%d ", i);
+                //temp =temp+1; // print numbers
+        }
+        printf("\n");
+    }
+
+    return 0;
+}
+
+op
+-------------------------------------------------------
+           space type pattern-:
+
+	if(j<=i) {
+				printf("%d ",temp); 
+				
+				temp=temp+2;
+			}
+			else printf(" ");
+---------------------------------------------------------------------
+                HOLLOW SQUARE-:
+
+#include <stdio.h>
+
+int main()
+{
+	int n=10;
+	for(int i=1; i<=n; i++)
+	{  
+		for(int j=1; j<=n; j++)
+		{
+			if (i == 1 || i == n || j == 1 || j == n)
+                printf("*");
+            else
+                printf(" ");
+			
+		}
+		printf("\n");
+	}
+}
