@@ -1,0 +1,545 @@
+Q: write a c program input number :
+	1---- 10 :number is present between 1 to 10 
+	11 ---20 :number is present between 11 to 20 
+	otherwise :input is not matched 
+
+program -->
+
+#include<stdio.h>
+int main(){
+    int a;
+    printf("Enter the number: \n");
+    scanf("%d",&a);
+    if (a >= 1 && a <=10){
+        printf("number is present between 1 to 10:\n");
+    }
+    else if ( a>=11 && a <=20){
+        printf("number is present between 11 to 20:\n");
+    }
+    else {
+        printf("number is not valid");
+    }
+    return 0;
+}
+-----------------------------------------------------------------------------------------------------
+
+Q: C program to convert temperature from Fahrenheit to Celsius and Celsius to Fahrenheit
+celsius 
+f---->c 
+fahrenheit
+c---f 
+program -->
+
+#include<stdio.h>
+int main(){
+   char a;
+   printf("enter the character f for fahreneit and c for celcius:\n");
+   scanf("%c",&a);
+   if (a =='f'){
+       float c,f;
+       printf("enter the temperatue in fahreniet:\n");
+       scanf("%f"  ,&f);
+       c = (f -32)* 5/9;
+       printf("temperature in celsius: %.2f",c);
+   }
+   else if (a=='c'){
+       float b,t;
+       printf(" Enter the temperature in celsious:\n");
+       scanf("%f",&t);
+       b = (t*9/5)+32;
+       printf(" temperature in fahreniet: %.2f ",b);
+   }
+   else{
+       printf("invalid number:");
+   }
+   
+   
+    return 0;
+}
+-----------------------------------------------------------------------------------------------------
+
+Q: C program to enter student marks and find percentage and grade
+A college has the following rules for the grading system:
+5 marks (grade + %)
+1. Below 25 – F
+2. 25 to 45 – E
+3. 45 to 50 – D
+4. 50 to 60 – C
+5. 60 to 80 – B 
+6. Above 80 – A
+
+program -->
+
+#include<stdio.h>
+int main() {
+    float a;
+    printf("Enter the marks:\n");
+    scanf("%f",&a);
+    if (a>=0 && a <=100) {
+        float p = (a/100) * 100;
+        printf("Percentage %.2f \n",p);
+        
+        if (a>=80){
+            printf("Grade is A:\n");
+        }
+        else if(a>=60 && a <=79){
+            printf("Grade is B:\n");
+        }
+        else if(a>=50 && a<=59){
+            printf("Grade is C:\n");
+            
+        }
+        else if (a>=45 && a<= 49){
+            printf("Grade is D:\n");
+        }
+        else if (a>=25 && a<=44){
+            printf("Grade is E:\n");
+        }
+        else if (a<=25){
+            printf("Grade is f:\n");
+        }
+        else {
+            printf("invalid marks entered");
+        }
+        
+    
+    }
+    return 0;
+}
+-----------------------------------------------------------------------------------------------------
+
+Q: three number maximum
+
+program -->
+
+#include<stdio.h>
+int main(){
+    int a,b,c;
+    printf("enter the value of a and b and c ");
+    scanf("%d %d %d",&a,&b,&c);
+    if(a>b && a>c){
+        printf("a is maximum");
+    }
+    else if(b>a && b>c){
+        printf("b is maximum ");
+    }
+    else{
+        printf("c is maximum ");
+    }
+    return 0;
+}
+-----------------------------------------------------------------------------------------------------
+
+Q: five number maximum
+program -->
+
+#include<stdio.h>
+int main(){
+    int a,b,c,d,f;
+    printf("enter the value of a and b and c and d and f ");
+    scanf("%d %d %d %d %d",&a,&b,&c,&d,&f);
+    if(a>b && a>c){
+        printf("a is maximum:\n");
+    }
+    else if(b>a && b>c){
+        printf("b is maximum:\n ");
+    }
+    else if (c>d && c>b){
+        printf (" c is maximun");
+    }
+    else if (d>f && d>c){
+        printf("d is maximum");
+    }
+    
+    else{
+        printf("f is maximum ");
+    }
+    return 0;
+}
+-----------------------------------------------------------------------------------------------------
+
+Q: Letter Grade Calculator
+Write a program that accepts a student's score as input and calculates their letter grade using if-else if-else statements. Consider the standard letter grading system (A, B, C, D, F).
+
+program -->
+
+#include<stdio.h>
+int main(){
+    int a;
+    printf("Enter the score:\n");
+    scanf("%d",&a);
+    if (a>=90){
+        printf("Grade is A:\n");
+    }
+    else if (a>=75){
+        printf("Grade is B:\n");
+    }
+    else if (a>=60){
+        printf("Grade is C:\n");
+    }    
+    else if (a>=40){
+        printf("Grade is D:\n");
+        
+    }
+    else if (a>=25){
+        printf("Grade is F:\n");
+    }
+    else {
+        printf("invalid score number:");
+    }
+    return 0;
+}
+-----------------------------------------------------------------------------------------------------
+
+Q: Ticket Booking System
+Design a ticket booking system for a cinema that calculates the ticket price based on the age of the customer. Children (age < 12) get a 50% discount, while seniors (age >= 65) get a 30% discount.
+
+program-->
+
+#include<stdio.h>
+int main(){
+    int age;
+    float ticketprice = 200;
+    printf("Enter your age:\n");
+    scanf("%d",&age);
+    if (age <12){
+        ticketprice*=0.5;
+        printf("You are eligible for a Children's discount:\n");
+    }
+    else if(age>=65){
+        ticketprice*=0.7;
+        printf("You are eligible for a seniour citizen discount:\n");
+    }
+    else {
+        printf("No discount applicable:\n");
+        
+    }
+    printf("Your final ticket price is: %.2f\n", ticketprice);
+    return 0;
+    
+}
+
+-----------------------------------------------------------------------------------------------------
+
+Q: Menu Selection
+Design a simple restaurant menu system that takes a customer's choice (1-3) and displays the selected food item and its price. Use if-else if-else statements.
+
+Program -->
+
+#include<stdio.h>
+int main(){
+    float weight;
+    printf("Enter the weight:\n");
+    scanf("%f",&weight);
+    float height;
+    printf("Enter the height:\n");
+    scanf("%f",&height);
+    float bmi;
+    
+    bmi = weight/(height / 100);
+    printf("Enter the bmi:%.2f",bmi);
+    
+    if (bmi < 18.5){
+        printf("underweight:\n");
+        
+    }
+    else if(18.5 <= bmi < 24.9){
+        printf("normal weight:\n");
+    }
+    else if (25 <= bmi < 29.9){
+        printf("overweight:\n");
+    }
+    else if (bmi >= 30){
+        printf("obesity:\n");
+    }
+    else{
+        printf("invalid number:");
+    }
+    return 0;
+}
+-----------------------------------------------------------------------------------------------------
+
+Q: 
+
+#include<stdio.h>
+int main(){
+    char a;
+    printf("Display the food :\n");
+    scanf("%c",&a);
+    
+    if (a=='a'){
+        printf("Pizza:\n");
+        printf("prize is 200:\n");
+        
+    }
+    else if (a=='b'){
+        printf("Burger:\n");
+        printf("prize is 300:\n");
+        
+    }
+    else if (a=='c'){
+        printf("Daal bati:\n");
+        printf("Prize is 500:\n");
+    }
+    else{
+        printf("not valid");
+    }
+    return 0;
+}
+-----------------------------------------------------------------------------------------------------
+
+Q:   Time of Day Greeting
+Create a program that asks for the time of day (morning, afternoon, evening) and then greets the user accordingly. For example, "Good morning!" if the time is morning.
+
+Program -->
+
+#include<stdio.h>
+int main(){
+    int a;
+    printf("enter the time:\n");
+    scanf("%d",&a);
+    if (a>=6 && a<=11){
+        printf("Good Morning:\n");
+    }
+    else if (a>=12 && a<=17){
+        printf("Good afternoon:\n");
+    }
+    else if (a>=18 && a<=23){
+        printf("Good evening:\n");
+    }
+    else {
+        printf("not a valid number:");
+    }
+    return 0;
+}
+-----------------------------------------------------------------------------------------------------
+
+Q: BMI Calculator
+Create a program that calculates the Body Mass Index (BMI) based on a person's weight and height. Categorize the BMI using the following ranges:
+
+BMI < 18.5: Underweight
+18.5 <= BMI < 24.9: Normal weight
+25 <= BMI < 29.9: Overweight
+BMI >= 30: Obesity
+
+Program -->
+
+#include<stdio.h>
+int main(){
+    float weight;
+    printf("Enter the weight:\n");
+    scanf("%f",&weight);
+    float height;
+    printf("Enter the height:\n");
+    scanf("%f",&height);
+    float bmi;
+    
+    bmi = weight/(height / 100);
+    printf("Enter the bmi:%.2f",bmi);
+    
+    if (bmi < 18.5){
+        printf("underweight:\n");
+        
+    }
+    else if(18.5 <= bmi < 24.9){
+        printf("normal weight:\n");
+    }
+    else if (25 <= bmi < 29.9){
+        printf("overweight:\n");
+    }
+    else if (bmi >= 30){
+        printf("obesity:\n");
+    }
+    else{
+        printf("invalid number:");
+    }
+    return 0;
+}
+-----------------------------------------------------------------------------------------------------
+
+Q: Tax Calculator
+Write a c program that calculates income tax for individuals based on the following criteria:
+
+Program -->
+
+
+#include<stdio.h>
+int main(){
+    int income;
+    printf("Enter the income:\n");
+    scanf("%d",&income);
+    if(income <= 10000){
+        printf("No tax");
+    }
+    else if(income>=10001 && income<= 30000){
+        float total = income*0.90;
+        printf("total income is:%.2f",total);
+        
+    }
+    else if(income>=30001 && income<=50000){
+        float total = income*0.80;
+        printf("Total income is: %.2f",total);
+        
+    }
+    else if(income > 50000){
+        float total = income*0.70;
+        printf("Total income is:%.2f",total);
+    }
+    else{
+        printf("invalid income:");
+    }
+    return 0;
+}
+-----------------------------------------------------------------------------------------------------
+
+Q: electric city bill : 
+4 unit 
+40 
+1- 10 = 10% 
+11-20 =15% 
+21-40 =30% 
+50 =50% 
+
+output : 
+name:
+unit :3 
+amout 30 
+discout : 10% 
+total pay amount : 
+
+Program -->
+
+#include<stdio.h>
+int main() {
+    float a;
+    printf("Enter the number:\n");
+    scanf("%f",&a);
+    if(a>=1 && a<=10){
+        float total = a*0.90;
+        printf("Total electeicity bill: %f \n",total);
+    }
+    else if (a>=11 && a<=20){
+        float total = a*0.85;
+        printf("Total electricity bill: %f \n",total);
+    }
+    else if(a>=21 && a<=40){
+        float total = a*0.70;
+        printf("Total electricity bill: %f \n",total);
+        
+    }
+    else if (a>=50){
+        float total = a*0.50;
+        printf("Total electricity bill: %f \n",total);
+    }
+    else {
+        printf("not a valid number:");
+        
+    }
+    return 0;
+}
+-----------------------------------------------------------------------------------------------------
+
+Q: salalry :
+holidays (1) =full salary 
+2-5 =5% 
+5-14 =10% 
+15 =50% 
+else =not salary 
+
+output : 
+name:
+address: 
+bank details: 
+salary : 
+alot :
+ holidays 
+
+program -->
+
+#include<stdio.h>
+int main(){
+    int a;
+    printf("Enter the salary:\n");
+    scanf("%d",&a);
+    int b;
+    printf("Enter holidays:\n");
+    scanf("%d",&b);
+    if (b ==1){
+        printf("full salary:\n %d",a);
+    }
+    else if(b>=2 && b<=5){
+        float total = a*0.90;
+        printf("After 5 percent cut off: %.2f \n",total);
+    }
+    else if (b>=5 && b<=14){
+        float total = a*0.85;
+        printf("after the deduction of 15 percent: %.2f \n",total);
+    }
+    else if (b>=21 && b<=40){
+        float total = a*0.70;
+        printf("after the deduction of 30 percent: %.2f \n",total);
+        
+    }
+    else if (b>=15){
+        float total = a*0.50;
+        printf("after the deduction of 50 percent: %.2f \n",total);
+    }
+    else {
+        printf("invalid number:");
+    }
+    return 0;
+}
+-----------------------------------------------------------------------------------------------------
+
+Q: Write a c program to read the roll no, name,fnname and marks of three subjects and calculate the total, percentage and division.
+Test Data :
+Input the Roll Number of the student :784
+student name : 
+fname:
+mname:
+address:
+contact:
+Input the marks of Physics, Chemistry and Computer Application : 70 80 90
+total: 
+precentage : % 
+division:
+
+program -->
+
+#include<stdio.h>  
+  
+int main()  
+{  
+    float s1, s2, s3, s4, s5, per;  
+  
+    printf("Enter marks of 5 subject\n");  
+    scanf("%f %f %f %f %f", &s1, &s2, &s3, &s4, &s5);  
+  
+    per = (s1 + s2 + s3 + s4 + s5) / 5.0;  
+  
+    if(per >= 60)  
+    {  
+        printf("Grade A\n");  
+    }  
+    else  
+    {  
+        if(per >= 50)  
+        {  
+            printf("Grade B\n");  
+        }  
+        else  
+        {  
+            if(per >= 40)  
+            {  
+                printf("Grade C\n");  
+            }  
+            else  
+            {  
+                printf("Failed!\n");  
+            }  
+        }  
+    }  
+  
+    return 0;
+}
+-------------------------------------------------------------------------------------------------------------------------------
